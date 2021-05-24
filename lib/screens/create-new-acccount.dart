@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:gymbuddy/SideBar/sidebar_layout.dart';
 import 'package:gymbuddy/pallete.dart';
 import 'package:gymbuddy/widgets/widgets.dart';
 
@@ -100,7 +101,16 @@ class CreateNewAccount extends StatelessWidget {
                     SizedBox(
                       height: 20,
                     ),
-                    RoundedButton(buttonName: 'GET STARTED')
+                    RoundedButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    SideBarLayout()),
+                          );
+                        },
+                        buttonName: 'GET STARTED')
                   ],
                 )
               ],

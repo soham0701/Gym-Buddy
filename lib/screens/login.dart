@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:gymbuddy/SideBar/sidebar_layout.dart';
+import 'package:gymbuddy/navigation/navigation_bloc.dart';
 import 'package:gymbuddy/pallete.dart';
 import 'package:gymbuddy/widgets/widgets.dart';
 
-class LogIn extends StatelessWidget {
+class LogIn extends StatelessWidget with NavigationStates {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -51,6 +53,13 @@ class LogIn extends StatelessWidget {
                     height: 25,
                   ),
                   RoundedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => SideBarLayout()),
+                      );
+                    },
                     buttonName: 'LOGIN',
                   ),
                   SizedBox(
@@ -60,7 +69,7 @@ class LogIn extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () => Navigator.pushNamed(context, 'CreateNewAccount'),
-                              child: Container(
+                child: Container(
                   child: Text(
                     'Create New Account',
                     style: kBodyText,
@@ -80,5 +89,3 @@ class LogIn extends StatelessWidget {
     );
   }
 }
-
-

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:gymbuddy/pages/homepage.dart';
 import 'screens/screens.dart';
 
 void main() {
@@ -17,12 +18,16 @@ class MyApp extends StatelessWidget {
             GoogleFonts.josefinSansTextTheme(Theme.of(context).textTheme),
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        scaffoldBackgroundColor: Colors.white,
+        primaryColor: Colors.white,
       ),
       initialRoute: '/',
       routes: {
         '/': (context) => LogIn(),
         'ForgotPassword': (context) => ForgotPassword(),
         'CreateNewAccount': (context) => CreateNewAccount(),
+        'LOGIN': (context) => HomePage(),
+        'Log Out': (context) => LogIn(),
       },
     );
   }
