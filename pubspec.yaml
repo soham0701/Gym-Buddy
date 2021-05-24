@@ -30,7 +30,8 @@ dependencies:
   cupertino_icons: ^1.0.0
   font_awesome_flutter: ^8.10.0
   google_fonts: ^1.1.1
-
+  rxdart: ^0.22.0
+  flutter_bloc: ^2.1.1
 
 
 dev_dependencies:
