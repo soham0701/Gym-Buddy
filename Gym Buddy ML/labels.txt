@@ -1,0 +1,3 @@
+0 Treadmill
+1 Elliptical
+2 Bench Press
